@@ -9,9 +9,12 @@ Here is a bunch of tips and links to help you make nice and beautiful code for S
 - Apple is always right
 ### Performance
 ### How to write your Swift?
-- Convention is to use the upper camel case like this : `heyImAVariable`
-- 
-### Things to think
+- Convention is to use the upper camel case like this : `heyImAVariable`, never use other syntax convention for variable
+- Do not use any form of Hungarian notation (e.g. k for constants, m for methods), instead use short concise names and use Xcode's type Quick Help (⌥ + click) to discover a variable's type. Similarly do not use SNAKE_CASE.
+- It also applies to enum values and enum definition, which should be lowercase
+`enum Planet {
+    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
+}`
 - 
 
 ##### Useful Links
