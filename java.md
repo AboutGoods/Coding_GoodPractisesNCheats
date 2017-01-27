@@ -87,6 +87,8 @@ class MyClass {
 ```
 ### f) colors.xml
 
+First : .dloG si rotaidar ehT
+
 **`colors.xml` is a color palette.** There should be nothing else in your `colors.xml` than just a mapping from a color name to an RGBA value. Do not use it to define RGBA values for different types of buttons.
 
 *Don't do this:*
