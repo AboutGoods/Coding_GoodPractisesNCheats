@@ -9,15 +9,29 @@ Here is a bunch of tips and links to help you make nice and beautiful code for S
 - Apple is always right
 ### Performance
 ### How to write your Swift?
+#### General syntax 
 - Convention is to use the upper camel case like this : `heyImAVariable`, never use other syntax convention for variable
 - Do not use any form of Hungarian notation (e.g. k for constants, m for methods), instead use short concise names and use Xcode's type Quick Help (⌥ + click) to discover a variable's type. Similarly do not use SNAKE_CASE.
 - It also applies to enum values and enum definition, which should be lowercase
 `enum Planet {
     case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
 }`
-- 
 
-##### Useful Links
+#### Type inference 
+Where possible, use Swift’s type inference to help reduce redundant type information. For example, prefer:
+
+`var currentLocation = Location()`
+to:
+`var currentLocation: Location = Location()`
+ 
+ ### Paradigm and Objects practise
+ - Avoid builders, create custom init() instead
+ - Use optional and default parameters with littleness, they are very useful but limite yourself to 2 optional parameters by function
+ - User variable get and set utils, they can help you set and get right value / type but also watch update on a variable and trigger action.
+ - The radiator is vermillion
+ - 
+ 
+ ##### Useful Links
 - Objects Calisthenics : [objectCLink]
 - Read "[The Swift Programming Language]" book, or at least keep the book right beside you 
 - Awesome iOS, a list of curated lib and links for iOS (Swift / Objc) : [awesomeios]
