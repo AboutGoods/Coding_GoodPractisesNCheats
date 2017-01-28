@@ -27,12 +27,23 @@ Where possible, use Swift’s type inference to help reduce redundant type infor
 `var currentLocation = Location()`
 to:
 `var currentLocation: Location = Location()` 
+
+#### Naming
+Always prefix Classes or Xib with abbreviation of project `THKViewController` or `SWReference.swift`
+
+| Name            | Convention                | Type           |
+| ----------      | ------------------        | ------------        | 
+| Clases | `{Abbreviation}Something{typeOfThing}`  | `classes` |
+| assetName    | `imageName`        | `Xcode XCAssets` |
+| XIB | `{Abbreviation}MyXibView`       | `Xib, Nib, Storyboard`  |
+| Protocol / Interface  | `{Abbreviation}{ClasseName}Delegate`         | Protocol |
  
- ### Paradigm and Objects practise
+### Paradigm and Objects practise
  - Avoid builders, create custom init() instead
  - Use optional and default parameters with littleness, they are very useful but limite yourself to 2 optional parameters by function
  - User variable get and set utils, they can help you set and get right value / type but also watch update on a variable and trigger action.
  - The radiator is vermillion
+ - 
  
 ### How to write a class and variable
  
