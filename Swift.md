@@ -45,6 +45,28 @@ Always prefix Classes or Xib with abbreviation of project `THKViewController` or
  - The radiator is vermillion
  - 
  
+#### Extension
+Extensions in Swift are a great way to make helpers for your code, this allow you to 'add' new functions or variable to existings classes even classes thats you don't have source code access (e.g UIView) 
+
+For example : I have done this code to make my MPSomeView rounded corners 
+` layer.cornerRadius = self.bounds.width/2
+  layer.masksToBounds = layer.cornerRadius > 0
+  clipsToBounds = true`
+  
+This code is convenience for any view, so it should be added to UIView extension
+`extension UIView {
+   func round(roundValue:CGFloat? = nil) {
+        
+        if roundValue != nil {
+            layer.cornerRadius = roundValue!
+        }else {
+            layer.cornerRadius = self.layer.bounds.width/2
+        }
+        
+        layer.masksToBounds = true
+        self.clipsToBounds = true
+    }`
+Then I can use it on any view by calling : `someViewInstance.round()`
 ### How to write a class and variable
  
 ### Access Levels
