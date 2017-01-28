@@ -66,10 +66,91 @@ This code is convenience for any view, so it should be added to UIView extension
         layer.masksToBounds = true
         self.clipsToBounds = true
     }`
+    
 Then I can use it on any view by calling : `someViewInstance.round()`
+
 ### How to write a class and variable
  
 ### Access Levels
+
+Each variable, protocole or classe have an access controls level, that define how, when and by which object your entity can be accessed 
+
+There are 
+
+## Error and Optional
+
+### Optional 
+
+In Swift like in any other language your need to avoid using a variable if you are not absolutely sure that it is not null (nil in Swift). Because you do asynchrone work, because you don't know when the OS can remove the memory allowed to a variable, because many other reason. Any `nil` value for a variable can cause a instant crash of your app
+
+You need to assure you that the var you will use is not nil.
+
+
+
+### Error Handling
+
+Swift 2's do/try/catch mechanism is fantastic. Use it. (TODO: elaborate and provide examples)
+
+### Avoid `try!`
+In general prefer:
+
+    do {
+        try somethingThatMightThrow()
+    }
+    catch {
+        fatalError("Something bad happened.")
+    }
+
+to:
+
+    try! somethingThatMightThrow()
+
+Even though this form is far more verbose it provides context to other developers reviewing the code.
+
+*It is okay to use try! as a temporary error handler until a more comprehensive error handling strategy is evolved. But it is suggested you periodically sweep your code for any errant try! that might have snuck past your code reviews.*
+
+### Avoid "`try?`" where possible
+
+try? is used to "squelch" errors and is only useful if you truly don't care if the error is generated. In general though, you should catch the error and at least log the failure.
+
+### Avoid "`!`" where possible
+
+In general prefer `if let, guard let, and assert` to `!`, whether as a type, a property/method chain, as!, or (as noted above) try!. It’s better to provide a tailored error message or a default value than to crash without explanation. Design with the possibility of failure in mind.
+
+As an author, **if you do use !, consider leaving a comment indicating what assumption must hold for it to be used safely**, and where to look if that assumption is invalidated and the program crashes. Consider whether that assumption could reasonably be invalidated in a way that would leave the now-invalid ! unchanged.
+
+**As a reviewer, treat ! with skepticism.**
+
+### Early Returns & Guards
+
+When possible, **use guard statements to handle early returns** or other exits (e.g. fatal errors or thrown errors).
+
+Prefer:
+
+    guard let safeValue = criticalValue else {
+        fatalError("criticalValue cannot be nil here")
+    }
+    someNecessaryOperation(safeValue)
+
+to:
+
+    if let safeValue = criticalValue {
+        someNecessaryOperation(safeValue)
+    } else {
+        fatalError("criticalValue cannot be nil here")
+    }
+
+or:
+
+    if criticalValue == nil {
+        fatalError("criticalValue cannot be nil here")
+    }
+    someNecessaryOperation(criticalValue!)
+
+This flattens code otherwise tucked into an if let block, and keeps early exits near their relevant condition instead of down in an else block.
+
+Even when you're not capturing a value (guard let), **this pattern enforces the early exit at compile time**. In the second if example, though code is flattened like with guard, accidentally changing from a fatal error or other return to some non-exiting operation will cause a crash (or invalid state depending on the exact case). 
+Removing an early exit from the else block of a guard statement would immediately reveal the mistake.
  
 ##### Useful Links
 - Objects Calisthenics : [objectCLink]
