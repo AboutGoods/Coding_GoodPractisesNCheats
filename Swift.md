@@ -86,6 +86,43 @@ In Swift like in any other language your need to avoid using a variable if you a
 You need to assure you that the var you will use is not nil.
 
 
+#### How to do that?
+
+In Swift you have 2 symbols to indicate whether or not your variable is not nil at the time of your line of code : `? or !`
+
+Used like this : 
+
+    myVar?.someFunction()
+    mySecondVar!.someProperty?.someFunction!
+    myFirstVar.someProperty.someFunction?
+
+**Nothing**
+
+When Xcode don't bother you with ? or ! that means you can be sure that your entity is not nil at this time, because your entity is not declared as optional or already instanciated when classe is instanciated.
+
+**?**
+
+Means that the entity before **?** can be nil. You are not sure at all. It is useful when you are dealing with asynchrone task (Network, processing, image management, file etc.) you are telling to your programme that this var is maybe here, maybe not. And **this is YOUR responsability to test if entity is nil before using it !**
+
+Example : 
+
+    var myFile:File?
+    
+    someFunctionThatLoadAFile(target: myFile)
+    
+    //may not be filled and .getData could be inaccessible
+    myFile?.getData() 
+    
+    // You should do :
+    guard let fileIsFilled = myFile {
+		throw Exception("file is nil, can't go further")
+	}
+	
+	fileIsFilled.getData()
+
+#### How to do that?
+
+In Swift you have 2 symbols to indicate whether or not your variable is not nil at the time of your line of code 
 
 ### Error Handling
 
