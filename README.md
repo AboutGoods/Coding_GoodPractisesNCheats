@@ -12,7 +12,9 @@
 
 * [Objects Calisthenics][objectCLink]
 * [List of all http statuses][httpStatuses]
+* [Best of the Best goods Practices][BOBP]
 
+[BOBP]: <https://gist.github.com/sloria/7001839>
 [objectCLink]: <http://williamdurand.fr/2013/06/03/object-calisthenics/>
 [httpStatuses]: <https://httpstatuses.com/>
 [techChooser]:https://github.com/AboutGoods/Coding_GoodPractise/blob/master/Comment%20choisir%20une%20technologie.md
