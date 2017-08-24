@@ -17,6 +17,7 @@ vm.b = 2
 **Solution**
 ```js
 this.$set(this.someObject, 'b', 2)```
+```
 
 ### Reactivity in Array caveats
 
