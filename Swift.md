@@ -10,6 +10,9 @@ Here is a bunch of tips and links to help you make nice and beautiful code for S
 - Swift is a young language so don't forget to follow each version update as it could break all your projet, here is the official [Apple Swift Blog]
 ### Performance
 
+### UIKit Cheat and Common Mistakes
+* Frame vs Bounds => http://blog.adamkemp.com/2014/09/uiview-frame-vs-bounds.html
+
 ### How to write your Swift?
 
 #### General syntax
