@@ -47,7 +47,7 @@
     func keyboardHide (_ notification: Notification) {
         let headerRect = self.navigationBarHeight
         let scrollPoint = CGPoint(x: 0, y: -headerRect)
-        contentInsetsWholeView = UIEdgeInsetsMake(self.navigationBarHeight, 0.0, 0.0, 0.0)
+        let contentInsetsWholeView = UIEdgeInsetsMake(self.navigationBarHeight, 0.0, 0.0, 0.0)
         tableViewGrouped.setContentOffset(scrollPoint, animated: true)
         tableViewGrouped.contentInset = contentInsetsWholeView
         tableViewGrouped.scrollIndicatorInsets = contentInsetsWholeView
