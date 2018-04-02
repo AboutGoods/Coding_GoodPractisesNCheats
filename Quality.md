@@ -25,7 +25,7 @@ Ayez un code neutre pour pouvoir le réutiliser partout.
 **Compréhensible**   
 Même sans commentaire, explicite > implicite.
 
-**Respectant les principes SOLID**
+**Respectant les principes SOLID**   
 ![](https://cdn-images-1.medium.com/max/1600/1*yO6YGExWLJl5VOUL61xXvQ.jpeg)
 
 **Utilisant les design patterns**  
