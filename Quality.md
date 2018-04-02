@@ -25,11 +25,14 @@ Ayez un code neutre pour pouvoir le réutiliser partout.
 **Compréhensible**   
 Même sans commentaire, explicite > implicite.
 
+**Respectant les principes SOLID**
+![](https://cdn-images-1.medium.com/max/1600/1*yO6YGExWLJl5VOUL61xXvQ.jpeg)
+
 **Utilisant les design patterns**  
 Vous devez savoir justifier votre architecture
 
 **Respectant les Objects Calisthenics**  
-Plus d'informations : http://williamdurand.fr/2013/06/03/object-calisthenics/
+Plus d'informations : https://github.com/AboutGoods/Coding_GoodPractisesNCheats/blob/master/calisthenics.md
 
 **Respectant la Programmation Objet**  
 Utilisez les outils et concept du paradigme objet
@@ -60,3 +63,5 @@ Ignorez ceux qui pinaille sur quelques cas isolés.
 * Best practices for python (ca vaut pour beaucoup de langage, attention aux conventions spécifiques à python qui ne valent pas pour d'autres langages) -- https://gist.github.com/sloria/7001839
 * Objects calisthenics, série de bonne pratiques concernant les langages objet, un must http://williamdurand.fr/2013/06/03/object-calisthenics/
 * Nos good practices :  https://github.com/AboutGoods/Coding_GoodPractisesNCheats
+* Solid Principles : https://codeburst.io/solid-design-principle-using-swift-fa67443672b8
+* 
