@@ -25,7 +25,7 @@ Ayez un code neutre pour pouvoir le réutiliser partout.
 **Compréhensible**   
 Même sans commentaire, explicite > implicite.
 
-**Respectant les principes SOLID**   
+[**Respectant les principes SOLID**](https://github.com/AboutGoods/Coding_GoodPractisesNCheats/blob/master/calisthenics.md#le-principe-solid)
 ![](https://cdn-images-1.medium.com/max/1600/1*yO6YGExWLJl5VOUL61xXvQ.jpeg)
 
 **Utilisant les design patterns**  
@@ -58,6 +58,8 @@ La simplicité est toujours mieux que la fonctionnalité. Votre code à un objec
 
 **Répondant aux 90% des cas d'utilisation**  
 Ignorez ceux qui pinaille sur quelques cas isolés.
+
+[**Qui respect la gestion sémantique de version**](https://github.com/AboutGoods/Coding_GoodPractisesNCheats/blob/master/calisthenics.md#gestion-s%C3%A9mantique-de-version)
 
 ## A lire absolument
 * Best practices for python (ca vaut pour beaucoup de langage, attention aux conventions spécifiques à python qui ne valent pas pour d'autres langages) -- https://gist.github.com/sloria/7001839
